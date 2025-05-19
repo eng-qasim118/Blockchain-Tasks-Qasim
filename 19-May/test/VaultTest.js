@@ -148,7 +148,7 @@ describe("Vault Contract", function() {
 
     });
 
-    it.only('Should tell next withrawal time ', async function() {
+    it('Should tell next withrawal time ', async function() {
         const withdrawalDelay = 86400;
         await DeployContract.connect(add1).deposit({ value: parseEther("5") });
         const tx = await DeployContract.connect(add1).withdraw(parseEther('1'));
