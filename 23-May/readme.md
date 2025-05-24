@@ -6,7 +6,7 @@
 
 ## ERC-20 :
 
-https://sepolia.etherscan.io/address/0x2611dDcdc33b1A9C26eE2184F131A5d8859f9cf5
+https://sepolia.etherscan.io/address/0xEB89Ce8A0967b843dB4ae28E50eA4984640Ef96D
 
 ## ERC-721 :
 

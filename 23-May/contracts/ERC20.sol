@@ -45,15 +45,15 @@ contract ERC20{
            }
            uint TokenValue = _value * 10 ** DECIMAL;
         require(s_balanceOf[_from] >= TokenValue, "Insufficient balance of sender");
-        if(s_allowance[msg.sender][_from]==0){
+        if(s_allowance[_from][msg.sender]==0){
             revert ERC20__AllowanceNotApproved();
         }
-        require(s_allowance[msg.sender][_from] >= TokenValue, "Allowance exceeded");
+        require(s_allowance[_from][msg.sender] >= TokenValue, "Allowance exceeded");
 
         s_balanceOf[_from] -= TokenValue;
         s_balanceOf[_to] += TokenValue;
 
-        s_allowance[msg.sender][_from] -= TokenValue;
+        s_allowance[_from][msg.sender] -= TokenValue;
 
         emit Transfer(_from, _to, TokenValue);
         return true;
